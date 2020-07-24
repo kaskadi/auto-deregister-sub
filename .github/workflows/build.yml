@@ -18,3 +18,5 @@ jobs:
       run: npm i
     - name: Test
       run: npm test
+      env:
+        EVENT_BUS_ARN: ${{ secrets.EVENT_BUS_ARN }}
