@@ -1,5 +1,5 @@
 {
-  "name": "auto-deregister-sub",
+  "name": "deregister-sub",
   "version": "1.0.0",
   "description": "",
   "main": "serverless.yml",

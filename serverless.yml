@@ -1,7 +1,7 @@
 # ATTENTION: when done with setting up this file, you can go into .github/workflows/deploy.yml to use the 'deploy -v' command for this action in order to deploy your lambda
 
 service:
-  name: auto-deregister-sub
+  name: deregister-sub
 
 package:
   individually: true
@@ -27,11 +27,11 @@ provider:
 
 functions:
   AutoDeregisterSub:
-    handler: auto-deregister-sub.handler
+    handler: deregister-sub.handler
     name: ${self:service.name}
     package:
       include:
-        - 'auto-deregister-sub.js'
+        - 'deregister-sub.js'
         - 'node_modules/**'
     # configure here the proper event(s) that should trigger your lambda
     events:
