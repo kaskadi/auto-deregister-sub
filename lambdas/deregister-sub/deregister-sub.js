@@ -1,11 +1,5 @@
 module.exports.handler = async (event) => {
-  return {
-    statusCode: 200,
-    headers: {
-      'Access-Control-Allow-Origin': '*'
-    },
-    body: JSON.stringify({
-      message: 'Your lambda is running!'
-    })
-  }
+  const getBulkBody = require('./helpers/get-bulk-body.js')
+  const deleteSub = require('./helpers/delete-sub.js')
+  return await getBulkBody(event.detail.responsePayload.deadNotifs).then(deleteSub)
 }

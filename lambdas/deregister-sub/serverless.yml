@@ -5,6 +5,7 @@ layers:
 package:
   include:
     - 'lambda/deregister-sub/deregister-sub.js'
+    - 'lambda/deregister-sub/helpers/**'
 environment:
   ES_ID: ${env:ES_ID}
   ES_SECRET: ${env:ES_SECRET}
