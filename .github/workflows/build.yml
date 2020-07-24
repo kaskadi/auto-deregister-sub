@@ -6,7 +6,7 @@ on:
       - 'dev'
     types: [opened, reopened, edited, synchronize]
     paths:
-      - 'template-kaskadi-lambda.js'
+      - 'deregister-sub.js'
       - 'test/**'
       - 'package.json'
 jobs:
