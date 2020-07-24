@@ -23,17 +23,7 @@ provider:
     type: eventBridge
 
 functions:
-  AutoDeregisterSub:
-    handler: deregister-sub.handler
-    name: ${self:service.name}
-    package:
-      include:
-        - 'deregister-sub.js'
-    events:
-      - eventBridge:
-          eventBus: ${env:EVENT_BUS_ARN}
-          pattern:
-            detail:
-              responsePayload:
-                hasDeadEndpoints:
-                  - true
+  DeregisterSub: ${file(./lambdas/deregister-sub/serverless.yml)}
+
+layers:
+  Layer: ${file(./layer/serverless.yml)}

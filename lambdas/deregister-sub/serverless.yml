@@ -1,0 +1,13 @@
+handler: deregister-sub.handler
+name: ${self:service.name}
+package:
+  include:
+    - 'deregister-sub.js'
+events:
+  - eventBridge:
+      eventBus: ${env:EVENT_BUS_ARN}
+      pattern:
+        detail:
+          responsePayload:
+            hasDeadEndpoints:
+              - true
