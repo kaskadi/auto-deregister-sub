@@ -1,8 +1,14 @@
 handler: deregister-sub.handler
 name: ${self:service.name}
+layers:
+  - { Ref: LayerLambdaLayer }
 package:
   include:
-    - 'deregister-sub.js'
+    - 'lambda/deregister-sub/deregister-sub.js'
+environment:
+  ES_ID: ${env:ES_ID}
+  ES_SECRET: ${env:ES_SECRET}
+  ES_ENDPOINT: ${env:ES_ENDPOINT}
 events:
   - eventBridge:
       eventBus: ${env:EVENT_BUS_ARN}
