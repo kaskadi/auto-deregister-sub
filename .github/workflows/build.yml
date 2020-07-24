@@ -20,3 +20,6 @@ jobs:
       run: npm test
       env:
         EVENT_BUS_ARN: ${{ secrets.EVENT_BUS_ARN }}
+        ES_ID: ${{ secrets.ES_ID }}
+        ES_SECRET: ${{ secrets.ES_SECRET }}
+        ES_ENDPOINT: ${{ secrets.ES_ENDPOINT }}
