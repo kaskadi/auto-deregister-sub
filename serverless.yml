@@ -23,7 +23,7 @@ provider:
     type: eventBridge
 
 functions:
-  DeregisterSub: ${file(./lambdas/deregister-sub/serverless.yml)}
+  DeregisterSub: ${file(./deregister-sub/serverless.yml)}
 
 layers:
   Layer: ${file(./layer/serverless.yml)}
