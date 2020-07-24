@@ -1,5 +1,5 @@
-handler: deregister-sub.handler
-name: ${self:service.name}
+handler: deregister-sub/deregister-sub.handler
+name: deregister-sub
 layers:
   - { Ref: LayerLambdaLayer }
 package:
