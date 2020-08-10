@@ -8,6 +8,7 @@ on:
     paths:
       - 'serverless.yml'
       - 'deregister-sub.js'
+      - 'helpers/**'
       - 'layer/**'
 jobs:
   deploy:

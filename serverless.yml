@@ -23,7 +23,37 @@ provider:
     type: eventBridge
 
 functions:
-  DeregisterSub: ${file(./deregister-sub/serverless.yml)}
+  DeregisterSub:
+    handler: deregister-sub.handler
+    name: deregister-sub
+    layers:
+      - { Ref: LayerLambdaLayer }
+    package:
+      include:
+        - 'deregister-sub.js'
+        - 'helpers/**'
+    environment:
+      ES_ID: ${env:ES_ID}
+      ES_SECRET: ${env:ES_SECRET}
+      ES_ENDPOINT: ${env:ES_ENDPOINT}
+    events:
+      - eventBridge:
+          eventBus: ${env:EVENT_BUS_ARN}
+          pattern:
+            detail:
+              responsePayload:
+                hasDeadEndpoints:
+                  - true
 
 layers:
-  Layer: ${file(./layer/serverless.yml)}
+  Layer:
+    path: layer
+    name: ${self:service.name}-layer
+    description": Layer for ${self:service.name}
+    compatibleRuntimes:
+      - nodejs10.x
+      - nodejs12.x
+    licenseInfo: MIT
+    package:
+      include:
+        - '**/**'
