@@ -29,6 +29,11 @@ jobs:
       with:
         type: lambda
         template: docs/template.md
+      env:
+        EVENT_BUS_ARN: ${{ secrets.EB_PUSH_NOTIFS_RESULTS_BUS_ARN }}
+        ES_ID: ${{ secrets.ES_ID }}
+        ES_SECRET: ${{ secrets.ES_SECRET }}
+        ES_ENDPOINT: ${{ secrets.ES_ENDPOINT }}
   deploy:
     runs-on: ubuntu-latest
     needs: generate-docs
