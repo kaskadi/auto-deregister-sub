@@ -49,7 +49,7 @@ layers:
   Layer:
     path: layer
     name: ${self:service.name}-layer
-    description": Layer for ${self:service.name}
+    description: Layer for ${self:service.name}
     compatibleRuntimes:
       - nodejs10.x
       - nodejs12.x
