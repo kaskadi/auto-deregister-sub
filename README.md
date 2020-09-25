@@ -18,8 +18,38 @@
 
 [![](https://img.shields.io/lgtm/grade/javascript/github/kaskadi/auto-deregister-sub?label=code%20quality&logo=LGTM)](https://lgtm.com/projects/g/kaskadi/auto-deregister-sub/?mode=list&logo=LGTM)
 
-:point_right: **Badges here** :point_left:
+<!-- You can add badges inside of this section if you'd like -->
 
 ****
 
-:point_down: **Your documentation here** :point_down:
+<!-- automatically generated documentation will be placed in here -->
+# Resources documentation
+
+The following lambda functions are defined in this repository:
+- [deregister-sub](#deregister-sub)
+
+The following layers are defined in this repository:
+- [deregister-sub-layer](#deregister-sub-layer)
+
+## deregister-sub <a name="deregister-sub"></a>
+
+|      Name      | Sources                        | Timeout |             Handler            | Layers                                                          |
+| :------------: | :----------------------------- | :-----: | :----------------------------: | :-------------------------------------------------------------- |
+| deregister-sub | <ul><li>Event Bridge</li></ul> | default | [handler](./deregister-sub.js) | <ul><li>[deregister-sub-layer](#deregister-sub-layer)</li></ul> |
+
+See [configuration file](./serverless.yml) for more details.
+
+## deregister-sub-layer <a name="deregister-sub-layer"></a>
+
+### Description
+
+Layer for deregister-sub
+
+### Dependencies
+
+- `aws-es-client`, version: `^1.0.2` ([see on NPM](https://www.npmjs.com/package/aws-es-client))
+
+See [configuration file](./serverless.yml) for more details.
+<!-- automatically generated documentation will be placed in here -->
+
+<!-- You can customize this template as you'd like! -->
