@@ -35,7 +35,7 @@ The following layers are defined in this repository:
 
 |      Name      | Sources                        | Timeout |             Handler            | Layers                                                          |
 | :------------: | :----------------------------- | :-----: | :----------------------------: | :-------------------------------------------------------------- |
-| deregister-sub | <ul><li>Event Bridge</li></ul> | default | [handler](./deregister-sub.js) | <ul><li>[deregister-sub-layer](#deregister-sub-layer)</li></ul> |
+| deregister-sub | <ul><li>event bridge</li></ul> | default | [handler](./deregister-sub.js) | <ul><li>[deregister-sub-layer](#deregister-sub-layer)</li></ul> |
 
 See [configuration file](./serverless.yml) for more details.
 
