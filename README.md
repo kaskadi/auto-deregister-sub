@@ -47,7 +47,7 @@ Layer for deregister-sub
 
 ### Dependencies
 
-- `aws-es-client`, version: `^1.0.2` ([see on NPM](https://www.npmjs.com/package/aws-es-client))
+- `aws-es-client`, version: `1.0.2` ([see on NPM](https://www.npmjs.com/package/aws-es-client))
 
 See [configuration file](./serverless.yml) for more details.
 
