@@ -7,7 +7,6 @@ on:
     paths:
       - 'serverless.yml'
       - 'package.json'
-      - 'helpers/**'
       - 'layer/**'
       - 'docs/**'
 env:
